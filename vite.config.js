@@ -23,5 +23,16 @@ export default defineConfig(({ mode }) => {
       host: "::",
       port: 8080,
     },
+    optimizeDeps: {
+      esbuildOptions: {
+        target: 'es2015'
+      }
+    },
+    build: {
+      target: 'es2015',
+      rollupOptions: {
+        external: [],
+      }
+    }
   }
 })
