@@ -76,18 +76,14 @@ body {
 }
 
 .loading-logo {
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loading-logo .logo-text {
-  color: #FFFFFF;
-}
-
-.loading-logo .logo-accent {
-  color: var(--accent-primary);
-  margin-left: 2px;
+.loading-logo-image {
+  height: 120px;
+  width: auto;
 }
 
 /* Header */
@@ -130,7 +126,7 @@ body {
 }
 
 .logo-image {
-  height: 50px;
+  height: 125px;
   width: auto;
 }
 
@@ -816,7 +812,7 @@ body {
 }
 
 .footer-logo-image {
-  height: 55px;
+  height: 137px;
   width: auto;
   margin: 0 auto;
 }

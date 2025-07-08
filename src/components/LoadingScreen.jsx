@@ -21,8 +21,11 @@ const LoadingScreen = () => {
           ease: "easeInOut"
         }}
       >
-        <span className="logo-text">GRUV</span>
-        <span className="logo-accent">LABEL</span>
+        <img 
+          src="/logo-gruvlabel.png" 
+          alt="GRUVLABEL" 
+          className="loading-logo-image"
+        />
       </motion.div>
     </motion.div>
   );
