@@ -574,29 +574,6 @@ body {
   filter: brightness(0.9) contrast(1.1);
 }
 
-/* Desktop specific styles */
-@media (min-width: 769px) {
-  .artist-image {
-    height: 350px;
-  }
-  
-  .artist-photo {
-    object-position: center center;
-    object-fit: cover;
-  }
-  
-  .artist-buttons {
-    justify-content: center;
-    max-width: 300px;
-    margin: 20px auto 0;
-  }
-  
-  .artists-grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-  }
-}
-
 .artist-card:hover .artist-photo {
   transform: scale(1.05);
   filter: brightness(1) contrast(1.2);
@@ -672,8 +649,9 @@ body {
 
 .artist-buttons {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   margin-top: 20px;
+  padding: 0 8px;
 }
 
 .btn-artist {
@@ -681,15 +659,18 @@ body {
   background: var(--accent-color);
   color: #FFFFFF;
   border-radius: 50px;
-  padding: 14px 16px;
+  padding: 12px 12px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-size: 10px;
   text-align: center;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-profile {
@@ -711,6 +692,45 @@ body {
   .btn-artist {
     font-size: 11px;
     padding: 12px 14px;
+  }
+}
+
+/* Posicionamento específico para imagem do DJ Zatelli */
+.artist-card[style*="#00ff80"] .artist-photo {
+  object-position: center 20%;
+}
+
+/* Desktop specific styles */
+@media (min-width: 769px) {
+  .artist-image {
+    height: 350px;
+  }
+  
+  .artist-photo {
+    object-position: center center;
+    object-fit: cover;
+  }
+  
+  .artist-card[style*="#00ff80"] .artist-photo {
+    object-position: center 15%;
+  }
+  
+  .artist-buttons {
+    justify-content: center;
+    max-width: 320px;
+    margin: 20px auto 0;
+    gap: 12px;
+    padding: 0 16px;
+  }
+  
+  .btn-artist {
+    font-size: 11px;
+    padding: 14px 16px;
+  }
+  
+  .artists-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
   }
 }
 
