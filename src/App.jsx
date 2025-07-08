@@ -86,7 +86,7 @@ function App() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <img 
-              src="/logo-gruvlabel.svg" 
+              src="/logo-gruvlabel.png" 
               alt="Gruv Label Logo" 
               className="logo-image"
             />
@@ -565,7 +565,7 @@ function App() {
             <div className="footer-content">
               <div className="footer-logo">
                 <img 
-                  src="/logo-gruvlabel.svg" 
+                  src="/logo-gruvlabel.png" 
                   alt="Gruv Label Logo" 
                   className="footer-logo-image"
                 />
