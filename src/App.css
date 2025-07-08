@@ -12,11 +12,11 @@
   --deezer-blue: #96F9F3;
   --deezer-orange: #FF673D;
   --deezer-yellow: #FCFF60;
-  --dark-bg: #0D0D0D;
+  --dark-bg: #0A0A0A;
   --dark-card: #151515;
   --dark-card-hover: #202020;
-  --accent-primary: #00FF87;
-  --accent-secondary: #FF0080;
+  --accent-primary: #CCFF00;
+  --accent-secondary: #CCFF00;
 }
 
 html {
@@ -26,7 +26,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   background: var(--dark-bg);
-  color: #fff;
+  color: #FFFFFF;
   overflow-x: hidden;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -45,14 +45,14 @@ body {
   position: fixed;
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle, rgba(0,255,135,0.8) 0%, rgba(0,255,135,0.3) 70%, transparent 100%);
+  background: radial-gradient(circle, rgba(204,255,0,0.8) 0%, rgba(204,255,0,0.3) 70%, transparent 100%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
   transition: all 0.15s cubic-bezier(0.23, 1, 0.320, 1);
   backdrop-filter: blur(2px);
-  border: 1px solid rgba(0,255,135,0.3);
+  border: 1px solid rgba(204,255,0,0.3);
 }
 
 @media (max-width: 768px) {
@@ -82,7 +82,7 @@ body {
 }
 
 .loading-logo .logo-text {
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .loading-logo .logo-accent {
@@ -97,7 +97,7 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(13, 13, 13, 0.95);
+  background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
@@ -105,8 +105,8 @@ body {
 
 .header-scrolled {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  background: rgba(13, 13, 13, 0.98);
-  border-bottom-color: rgba(0, 255, 135, 0.2);
+  background: rgba(10, 10, 10, 0.98);
+  border-bottom-color: rgba(204, 255, 0, 0.2);
 }
 
 .container {
@@ -133,7 +133,7 @@ body {
 }
 
 .logo-text {
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .logo-accent {
@@ -165,7 +165,7 @@ body {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -208,7 +208,7 @@ body {
 }
 
 .nav-link {
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
   font-weight: 500;
   font-size: 15px;
@@ -245,17 +245,17 @@ body {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   padding: 12px 24px;
   border-radius: 30px;
-  color: #000 !important;
+  color: #0A0A0A !important;
   font-weight: 600;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 255, 135, 0.3);
+  box-shadow: 0 4px 20px rgba(204, 255, 0, 0.3);
 }
 
 .contact-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 255, 135, 0.4);
+  box-shadow: 0 8px 30px rgba(204, 255, 0, 0.4);
 }
 
 .contact-btn::after {
@@ -268,7 +268,7 @@ body {
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(13, 13, 13, 0.98);
+  background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 30px 24px;
@@ -310,7 +310,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(13, 13, 13, 0.8) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(13, 13, 13, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.8) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(10, 10, 10, 0.8) 100%);
 }
 
 .hero-bg {
@@ -320,8 +320,8 @@ body {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 255, 135, 0.15) 0%, transparent 70%),
-    radial-gradient(circle at 80% 20%, rgba(255, 0, 128, 0.15) 0%, transparent 70%);
+    radial-gradient(circle at 20% 80%, rgba(204, 255, 0, 0.15) 0%, transparent 70%),
+    radial-gradient(circle at 80% 20%, rgba(204, 255, 0, 0.15) 0%, transparent 70%);
   z-index: 2;
 }
 
@@ -343,12 +343,12 @@ body {
   font-size: clamp(3rem, 10vw, 7rem);
   font-weight: 900;
   letter-spacing: -4px;
-  background: linear-gradient(135deg, #fff 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
-  text-shadow: 0 0 40px rgba(0, 255, 135, 0.3);
+  text-shadow: 0 0 40px rgba(204, 255, 0, 0.3);
 }
 
 .hero-title-sub {
@@ -395,7 +395,7 @@ body {
 
 .stat:hover {
   transform: translateY(-8px);
-  border-color: rgba(0, 255, 135, 0.3);
+  border-color: rgba(204, 255, 0, 0.3);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   background: rgba(255, 255, 255, 0.05);
 }
@@ -452,18 +452,18 @@ body {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  color: #000;
-  box-shadow: 0 10px 30px rgba(0, 255, 135, 0.3);
+  color: #0A0A0A;
+  box-shadow: 0 10px 30px rgba(204, 255, 0, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(0, 255, 135, 0.4);
+  box-shadow: 0 20px 40px rgba(204, 255, 0, 0.4);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #fff;
+  color: #FFFFFF;
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -485,7 +485,7 @@ body {
   font-weight: 900;
   text-align: center;
   margin-bottom: 80px;
-  background: linear-gradient(135deg, #fff, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(135deg, #FFFFFF, var(--accent-primary), var(--accent-secondary));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -579,7 +579,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 16px;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .artist-stats {
@@ -617,19 +617,19 @@ body {
 
 .social-link.youtube {
   background: #FF0000;
-  color: #fff;
+  color: #FFFFFF;
   border-color: #FF0000;
 }
 
 .social-link.instagram {
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  color: #fff;
+  color: #FFFFFF;
   border: none;
 }
 
 .social-link.spotify {
   background: var(--spotify-green);
-  color: #fff;
+  color: #FFFFFF;
   border-color: var(--spotify-green);
 }
 
@@ -642,7 +642,7 @@ body {
   width: 100%;
   margin-top: 20px;
   background: var(--accent-color);
-  color: #fff;
+  color: #FFFFFF;
   border-radius: 50px;
   padding: 14px 24px;
   font-weight: 600;
@@ -688,7 +688,7 @@ body {
 
 .service:hover {
   transform: translateY(-8px);
-  border-color: rgba(0, 255, 135, 0.3);
+  border-color: rgba(204, 255, 0, 0.3);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   background: rgba(255, 255, 255, 0.05);
 }
@@ -700,7 +700,7 @@ body {
 
 .service span {
   font-weight: 500;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 16px;
 }
 
@@ -721,7 +721,7 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .contact-info p {
@@ -751,7 +751,7 @@ body {
 .contact-method:hover {
   transform: translateX(10px);
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(0, 255, 135, 0.3);
+  border-color: rgba(204, 255, 0, 0.3);
 }
 
 .contact-method i {
@@ -761,7 +761,7 @@ body {
 }
 
 .contact-method a {
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -780,7 +780,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.03);
-  color: #fff;
+  color: #FFFFFF;
   font-size: 16px;
   transition: all 0.3s ease;
   font-family: inherit;
@@ -791,7 +791,7 @@ body {
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(0, 255, 135, 0.1);
+  box-shadow: 0 0 0 3px rgba(204, 255, 0, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -831,7 +831,7 @@ body {
   height: 48px;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   border-radius: 50%;
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -883,7 +883,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #FFFFFF;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 1;
@@ -927,7 +927,7 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .modal-info p {
@@ -974,7 +974,7 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .spotify-player {
@@ -1002,7 +1002,7 @@ body {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   text-decoration: none;
-  color: #fff;
+  color: #FFFFFF;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-weight: 500;
@@ -1052,14 +1052,14 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #fff;
-  background: rgba(255, 0, 128, 0.15) !important;
+  color: #FFFFFF;
+  background: rgba(204, 255, 0, 0.15) !important;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-contract-transparent:hover {
-  background: rgba(255, 0, 128, 0.25) !important;
+  background: rgba(204, 255, 0, 0.25) !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }

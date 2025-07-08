@@ -1,3 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variáveis de cores HSL */
+:root {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 100%;
+  --primary: 72 100% 50%;
+  --primary-foreground: 0 0% 4%;
+  --secondary: 0 0% 8%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 72 100% 50%;
+  --accent-foreground: 0 0% 4%;
+  --muted: 0 0% 8%;
+  --muted-foreground: 0 0% 65%;
+  --card: 0 0% 8%;
+  --card-foreground: 0 0% 100%;
+  --border: 0 0% 15%;
+  --input: 0 0% 15%;
+  --ring: 72 100% 50%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 100%;
+}
+
 /* Reset and base styles optimized for performance */
 *,
 *::before,
@@ -13,8 +38,8 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  background: #121212;
-  color: #fff;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
   overflow-x: hidden;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
