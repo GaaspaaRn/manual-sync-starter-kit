@@ -574,6 +574,29 @@ body {
   filter: brightness(0.9) contrast(1.1);
 }
 
+/* Desktop specific styles */
+@media (min-width: 769px) {
+  .artist-image {
+    height: 350px;
+  }
+  
+  .artist-photo {
+    object-position: center center;
+    object-fit: cover;
+  }
+  
+  .artist-buttons {
+    justify-content: center;
+    max-width: 300px;
+    margin: 20px auto 0;
+  }
+  
+  .artists-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+  }
+}
+
 .artist-card:hover .artist-photo {
   transform: scale(1.05);
   filter: brightness(1) contrast(1.2);
