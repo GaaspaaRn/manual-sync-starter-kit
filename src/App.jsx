@@ -260,7 +260,7 @@ function App() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
               >
-                Agenciamento de Artistas Megafunk
+                Agenciamento de Artistas <span className="sr-only">Megafunk</span>
               </motion.span>
             </motion.h1>
             
@@ -270,7 +270,7 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              Profissionalismo, Criatividade e Resultados para sua Carreira
+              Profissionalismo, Criatividade e Resultados nunca vistos antes
             </motion.p>
             
             <motion.div 
@@ -536,7 +536,9 @@ function App() {
                 >
                   <option value="">Selecione o Artista</option>
                   {djs.map(dj => (
-                    <option key={dj.id} value={dj.name}>{dj.name}</option>
+                    <option key={dj.id} value={dj.name}>
+                      {dj.name.replace('DJ ', '')}
+                    </option>
                   ))}
                 </motion.select>
                 <motion.textarea 
