@@ -252,7 +252,7 @@ function App() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
               >
-                GRUV LABEL
+                gruv label
               </motion.span>
               <motion.span 
                 className="hero-title-sub"
