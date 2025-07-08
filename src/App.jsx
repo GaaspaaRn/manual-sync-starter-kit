@@ -169,7 +169,7 @@ function App() {
       topTrack: 'MEGA PROMISCUOUS',
       stats: {
         youtubeSubscribers: '8.8K',
-        youtubeViews: '2,715,707',
+        youtubeViews: '3,001,231',
         youtubeVideos: '62',
         spotifyMonthly: '26.2K'
       },
@@ -188,7 +188,7 @@ function App() {
       topTrack: 'MEGA FUNK HOJE EU QUERO FUDER',
       stats: {
         youtubeSubscribers: '6.31K',
-        youtubeViews: '1,689,781',
+        youtubeViews: '1,848,406',
         youtubeVideos: '57',
         spotifyMonthly: '3.9K'
       },
@@ -207,7 +207,7 @@ function App() {
       topTrack: 'MEGA FUNK SUSTENTA',
       stats: {
         youtubeSubscribers: '1.79K',
-        youtubeViews: '709,993',
+        youtubeViews: '1,882,169',
         youtubeVideos: '66',
         spotifyMonthly: '83.8K'
       },
@@ -226,7 +226,7 @@ function App() {
       topTrack: 'Mega Senta Fumadona',
       stats: {
         youtubeSubscribers: '2.46K',
-        youtubeViews: '566,399',
+        youtubeViews: '627,512',
         youtubeVideos: '47',
         spotifyMonthly: '0.2K'
       },
