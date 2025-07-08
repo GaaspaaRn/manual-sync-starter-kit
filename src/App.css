@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: var(--dark-bg);
   color: #FFFFFF;
   overflow-x: hidden;
@@ -124,12 +124,14 @@ body {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 900;
-  letter-spacing: -1px;
   z-index: 1001;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.logo-image {
+  height: 35px;
+  width: auto;
 }
 
 .logo-text {
@@ -810,9 +812,13 @@ body {
 }
 
 .footer-logo {
-  font-size: 1.8rem;
-  font-weight: 900;
   margin-bottom: 24px;
+}
+
+.footer-logo-image {
+  height: 40px;
+  width: auto;
+  margin: 0 auto;
 }
 
 .footer-content p {
