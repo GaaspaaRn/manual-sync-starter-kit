@@ -168,10 +168,10 @@ function App() {
       spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
       topTrack: 'MEGA PROMISCUOUS',
       stats: {
-        youtubeSubscribers: '8.78K',
-        youtubeViews: '2,688,765',
-        youtubeVideos: '61',
-        spotifyMonthly: '15.2K'
+        youtubeSubscribers: '8.8K',
+        youtubeViews: '2,715,707',
+        youtubeVideos: '62',
+        spotifyMonthly: '26.2K'
       },
       bio: 'DJ e produtor musical especializado em megafunk, natural de Joinville, Santa Catarina. Com um estilo único e exclusivo, Lucas Henrique vem conquistando seu espaço na cena musical.',
       color: '#ff0080'
@@ -187,10 +187,10 @@ function App() {
       spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
       topTrack: 'MEGA FUNK HOJE EU QUERO FUDER',
       stats: {
-        youtubeSubscribers: '6.25K',
-        youtubeViews: '1,547,336',
-        youtubeVideos: '56',
-        spotifyMonthly: '8.9K'
+        youtubeSubscribers: '6.31K',
+        youtubeViews: '1,689,781',
+        youtubeVideos: '57',
+        spotifyMonthly: '3.9K'
       },
       bio: 'Thiago Correia, nascido e criado na cidade de Joinville (SC), começou a se envolver com a cena do Mega Funk em 2021, criando elementos da música eletrônica.',
       color: '#00ff80'
@@ -206,10 +206,10 @@ function App() {
       spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
       topTrack: 'MEGA FUNK SUSTENTA',
       stats: {
-        youtubeSubscribers: '1.66K',
-        youtubeViews: '565,872',
-        youtubeVideos: '64',
-        spotifyMonthly: '4.2K'
+        youtubeSubscribers: '1.79K',
+        youtubeViews: '709,993',
+        youtubeVideos: '66',
+        spotifyMonthly: '83.8K'
       },
       bio: 'Produtor emergente na cena do megafunk, conhecido por suas batidas inovadoras e colaborações com outros artistas da região Sul.',
       color: '#8000ff'
@@ -225,10 +225,10 @@ function App() {
       spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
       topTrack: 'Mega Senta Fumadona',
       stats: {
-        youtubeSubscribers: '2.45K',
-        youtubeViews: '560,678',
+        youtubeSubscribers: '2.46K',
+        youtubeViews: '566,399',
         youtubeVideos: '47',
-        spotifyMonthly: '2.8K'
+        spotifyMonthly: '0.2K'
       },
       bio: 'Artista versátil que combina elementos do funk tradicional com a energia do megafunk, criando um som único e envolvente.',
       color: '#ff8000'
