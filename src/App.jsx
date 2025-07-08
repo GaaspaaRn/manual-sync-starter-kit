@@ -405,14 +405,28 @@ function App() {
                       </motion.a>
                     </div>
                     
-                    <motion.button 
-                      className="btn btn-artist" 
-                      style={{ background: dj.color }}
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      VER PERFIL
-                    </motion.button>
+                    <div className="artist-buttons">
+                      <motion.button 
+                        className="btn btn-artist btn-profile" 
+                        style={{ background: dj.color }}
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        VER PERFIL
+                      </motion.button>
+                      <motion.button 
+                        className="btn btn-artist btn-contract" 
+                        style={{ background: `linear-gradient(135deg, ${dj.color}88, ${dj.color})` }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openWhatsApp(`Olá, gostaria de saber mais sobre o ${dj.artistName}.`);
+                        }}
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        CONTRATAR {dj.artistName.replace('DJ ', '').toUpperCase()}
+                      </motion.button>
+                    </div>
                   </div>
                 </motion.div>
               </RevealOnScroll>

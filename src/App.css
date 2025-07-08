@@ -647,16 +647,48 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.btn-artist {
-  width: 100%;
+.artist-buttons {
+  display: flex;
+  gap: 12px;
   margin-top: 20px;
+}
+
+.btn-artist {
+  flex: 1;
   background: var(--accent-color);
   color: #FFFFFF;
   border-radius: 50px;
-  padding: 14px 24px;
+  padding: 14px 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 12px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-profile {
+  background: var(--accent-color);
+}
+
+.btn-contract {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-color));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile responsive for buttons */
+@media (max-width: 480px) {
+  .artist-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .btn-artist {
+    font-size: 11px;
+    padding: 12px 14px;
+  }
 }
 
 /* About Section */
@@ -868,6 +900,7 @@ body {
   justify-content: center;
   z-index: 10000;
   padding: 20px;
+  overflow-y: auto;
 }
 
 .modal {
@@ -882,6 +915,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  margin: auto;
 }
 
 .modal-close {
