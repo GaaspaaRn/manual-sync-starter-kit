@@ -1,122 +1,18 @@
-
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Youtube, Instagram, Music } from 'lucide-react';
 import './App.css';
 
-// Import artist images with lazy loading
-const djLucasHenriqueImg = new URL('./assets/djlucashenrique.webp', import.meta.url).href;
-const djZatelliImg = new URL('./assets/djzatelli_1.webp', import.meta.url).href;
-const djRodrizImg = new URL('./assets/djrodriz.webp', import.meta.url).href;
-const djDigoIdgImg = new URL('./assets/djdigoidg.webp', import.meta.url).href;
+// Import components
+import CustomCursor from './components/CustomCursor';
+import LazyImage from './components/LazyImage';
+import RevealOnScroll from './components/RevealOnScroll';
+import LoadingScreen from './components/LoadingScreen';
+import ArtistModal from './components/ArtistModal';
 
-// Custom cursor component
-const CustomCursor = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-  
-  useEffect(() => {
-    const updateMousePosition = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    
-    const handleMouseEnter = () => setIsHovering(true);
-    const handleMouseLeave = () => setIsHovering(false);
-    
-    window.addEventListener('mousemove', updateMousePosition);
-    
-    // Add hover listeners to interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .artist-card, .social-link');
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', handleMouseEnter);
-      el.addEventListener('mouseleave', handleMouseLeave);
-    });
-    
-    return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-      interactiveElements.forEach(el => {
-        el.removeEventListener('mouseenter', handleMouseEnter);
-        el.removeEventListener('mouseleave', handleMouseLeave);
-      });
-    };
-  }, []);
-  
-  return (
-    <motion.div
-      className="custom-cursor"
-      animate={{
-        x: mousePosition.x - 10,
-        y: mousePosition.y - 10,
-        scale: isHovering ? 1.5 : 1,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 500,
-        damping: 28,
-      }}
-    />
-  );
-};
-
-// Lazy loading image component
-const LazyImage = ({ src, alt, className, ...props }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef();
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-    
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-    
-    return () => observer.disconnect();
-  }, []);
-  
-  return (
-    <div ref={imgRef} className={className} {...props}>
-      {isInView && (
-        <motion.img
-          src={src}
-          alt={alt}
-          className={className}
-          onLoad={() => setIsLoaded(true)}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          loading="lazy"
-          {...props}
-        />
-      )}
-    </div>
-  );
-};
-
-// Reveal animation component
-const RevealOnScroll = ({ children, delay = 0 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
-    >
-      {children}
-    </motion.div>
-  );
-};
+// Import data and utils
+import { djs, getTotalStats } from './data/djs';
+import { openWhatsApp } from './utils/whatsapp';
 
 function App() {
   const [selectedDJ, setSelectedDJ] = useState(null);
@@ -127,6 +23,9 @@ function App() {
   const { scrollY } = useScroll();
   const heroY = useTransform(scrollY, [0, 500], [0, 150]);
   const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
+  
+  // Get total stats
+  const totalStats = getTotalStats();
   
   // Smooth scroll setup
   useEffect(() => {
@@ -156,98 +55,6 @@ function App() {
     }
   }, []);
 
-  const djs = [
-    {
-      id: 'lucas',
-      name: 'DJ Lucas Henrique',
-      artistName: 'Lucas Henrique',
-      image: djLucasHenriqueImg,
-      youtube: 'https://www.youtube.com/channel/UCnvOrXyqGdK2AFrYcAQAwyg',
-      instagram: 'https://www.instagram.com/djlucashenrique_/',
-      spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0cm0T95hVIgR9IKmz76prJ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-      spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
-      topTrack: 'MEGA PROMISCUOUS',
-      stats: {
-        youtubeSubscribers: '8.8K',
-        youtubeViews: '3,001,231',
-        youtubeVideos: '62',
-        spotifyMonthly: '26.2K'
-      },
-      bio: 'DJ e produtor musical especializado em megafunk, natural de Joinville, Santa Catarina. Com um estilo único e exclusivo, Lucas Henrique vem conquistando seu espaço na cena musical.',
-      color: '#ff0080'
-    },
-    {
-      id: 'zatelli',
-      name: 'DJ Zatelli',
-      artistName: 'Zatelli',
-      image: djZatelliImg,
-      youtube: 'https://www.youtube.com/@DjZatelli',
-      instagram: 'https://www.instagram.com/djzatelli/',
-      spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3q20ZeAbg7FvRr7dbWpeV1?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-      spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
-      topTrack: 'MEGA FUNK HOJE EU QUERO FUDER',
-      stats: {
-        youtubeSubscribers: '6.31K',
-        youtubeViews: '1,848,406',
-        youtubeVideos: '57',
-        spotifyMonthly: '3.9K'
-      },
-      bio: 'Thiago Correia, nascido e criado na cidade de Joinville (SC), começou a se envolver com a cena do Mega Funk em 2021, criando elementos da música eletrônica.',
-      color: '#00ff80'
-    },
-    {
-      id: 'rodriz',
-      name: 'DJ Rodriz',
-      artistName: 'Rodriz',
-      image: djRodrizImg,
-      youtube: 'https://www.youtube.com/@djrodriz1',
-      instagram: 'https://www.instagram.com/rodriz.wav/?hl=pt-br',
-      spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0cm0T95hVIgR9IKmz76prJ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-      spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
-      topTrack: 'MEGA FUNK SUSTENTA',
-      stats: {
-        youtubeSubscribers: '1.79K',
-        youtubeViews: '1,882,169',
-        youtubeVideos: '66',
-        spotifyMonthly: '83.8K'
-      },
-      bio: 'Produtor emergente na cena do megafunk, conhecido por suas batidas inovadoras e colaborações com outros artistas da região Sul.',
-      color: '#8000ff'
-    },
-    {
-      id: 'digo',
-      name: 'Digo IDG',
-      artistName: 'Digo IDG',
-      image: djDigoIdgImg,
-      youtube: 'https://www.youtube.com/channel/UC-CEC6IFh1ogjyJlL3QOslQ',
-      instagram: 'https://www.instagram.com/digoidg/',
-      spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3q20ZeAbg7FvRr7dbWpeV1?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-      spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
-      topTrack: 'Mega Senta Fumadona',
-      stats: {
-        youtubeSubscribers: '2.46K',
-        youtubeViews: '627,512',
-        youtubeVideos: '47',
-        spotifyMonthly: '0.2K'
-      },
-      bio: 'Artista versátil que combina elementos do funk tradicional com a energia do megafunk, criando um som único e envolvente.',
-      color: '#ff8000'
-    }
-  ];
-
-  const totalStats = {
-    subscribers: djs.reduce((acc, dj) => acc + parseFloat(dj.stats.youtubeSubscribers.replace('K', '')) * 1000, 0),
-    views: djs.reduce((acc, dj) => acc + parseFloat(dj.stats.youtubeViews.replace(/,/g, '')), 0),
-    videos: djs.reduce((acc, dj) => acc + parseInt(dj.stats.youtubeVideos), 0),
-    monthly: djs.reduce((acc, dj) => acc + parseFloat(dj.stats.spotifyMonthly.replace('K', '')) * 1000, 0)
-  };
-
-  const openWhatsApp = useCallback((message) => {
-    const phoneNumber = '5547988625307';
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-  }, []);
-
   const toggleMobileMenu = useCallback(() => {
     setMobileMenuOpen(!mobileMenuOpen);
   }, [mobileMenuOpen]);
@@ -258,30 +65,7 @@ function App() {
 
   // Loading screen
   if (isLoading) {
-    return (
-      <motion.div 
-        className="loading-screen"
-        initial={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <motion.div
-          className="loading-logo"
-          animate={{ 
-            scale: [1, 1.1, 1],
-            opacity: [0.5, 1, 0.5]
-          }}
-          transition={{ 
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          <span className="logo-text">GRUV</span>
-          <span className="logo-accent">LABEL</span>
-        </motion.div>
-      </motion.div>
-    );
+    return <LoadingScreen />;
   }
 
   return (
@@ -800,149 +584,10 @@ function App() {
       {/* Artist Modal */}
       <AnimatePresence>
         {selectedDJ && (
-          <motion.div 
-            className="modal-overlay" 
-            onClick={() => setSelectedDJ(null)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <motion.div 
-              className="modal" 
-              onClick={(e) => e.stopPropagation()}
-              initial={{ scale: 0.8, opacity: 0, y: 50 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.8, opacity: 0, y: 50 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            >
-              <motion.button 
-                className="modal-close" 
-                onClick={() => setSelectedDJ(null)}
-                whileHover={{ scale: 1.1, rotate: 90 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <i className="fas fa-times"></i>
-              </motion.button>
-              
-              <div className="modal-content">
-                <motion.div 
-                  className="modal-header"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <div className="modal-avatar">
-                    <LazyImage 
-                      src={selectedDJ.image} 
-                      alt={selectedDJ.name} 
-                      className="modal-photo" 
-                    />
-                  </div>
-                  <div className="modal-info">
-                    <h2>{selectedDJ.name}</h2>
-                    <p>{selectedDJ.bio}</p>
-                    
-                    {/* Stats horizontais */}
-                    <div className="modal-stats-horizontal">
-                      <div className="modal-stat-item">
-                        <span className="modal-stat-number">{selectedDJ.stats.youtubeSubscribers}</span>
-                        <span className="modal-stat-label">YOUTUBE<br/>INSCRITOS</span>
-                      </div>
-                      <div className="modal-stat-item">
-                        <span className="modal-stat-number">{selectedDJ.stats.youtubeViews}</span>
-                        <span className="modal-stat-label">VISUALIZAÇÕES</span>
-                      </div>
-                      <div className="modal-stat-item">
-                        <span className="modal-stat-number">{selectedDJ.stats.spotifyMonthly}</span>
-                        <span className="modal-stat-label">OUVINTES/MÊS</span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  className="modal-section"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                >
-                  <h3>Música Mais Ouvida</h3>
-                  <div 
-                    className="spotify-player" 
-                    dangerouslySetInnerHTML={{ __html: selectedDJ.spotifyEmbed }}
-                  />
-                </motion.div>
-                
-                <motion.div 
-                  className="modal-section modal-social-section"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                >
-                  <h3>Redes Sociais</h3>
-                  <div className="modal-social-grid">
-                    <motion.a 
-                      href={selectedDJ.youtube} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="modal-social-button youtube"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Youtube size={20} />
-                      <span>YouTube</span>
-                    </motion.a>
-                    <motion.a 
-                      href={selectedDJ.instagram} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="modal-social-button instagram"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Instagram size={20} />
-                      <span>Instagram</span>
-                    </motion.a>
-                    <motion.a 
-                      href={selectedDJ.spotifyUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="modal-social-button spotify"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Music size={20} />
-                      <span>Spotify</span>
-                    </motion.a>
-                  </div>
-                </motion.div>
-              </div>
-              
-              {/* Fixed Contract Button - mais transparente */}
-              <motion.div 
-                className="modal-cta-transparent"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-              >
-                <motion.button 
-                  className="btn-contract-transparent"
-                  style={{ background: selectedDJ.color }}
-                  onClick={() => {
-                    openWhatsApp(`Olá, gostaria de saber mais sobre o ${selectedDJ.artistName}.`);
-                  }}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  CONTRATAR {selectedDJ.artistName.toUpperCase()}
-                </motion.button>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+          <ArtistModal 
+            selectedDJ={selectedDJ} 
+            onClose={() => setSelectedDJ(null)} 
+          />
         )}
       </AnimatePresence>
     </div>
