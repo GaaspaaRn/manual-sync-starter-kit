@@ -1064,8 +1064,92 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Design para Modal */
+/* Responsive Design */
 @media (max-width: 768px) {
+  /* Header Mobile */
+  .header .container {
+    padding: 0 16px;
+    height: 70px;
+  }
+  
+  .logo-image {
+    height: 90px;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .mobile-nav {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .mobile-nav .nav-link {
+    padding: 16px 20px;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .mobile-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(204, 255, 0, 0.3);
+    transform: translateX(5px);
+  }
+  
+  .mobile-nav .contact-btn {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #0A0A0A;
+    font-weight: 700;
+    margin-top: 8px;
+    box-shadow: 0 4px 20px rgba(204, 255, 0, 0.3);
+  }
+  
+  .mobile-nav .contact-btn:hover {
+    transform: translateX(5px) translateY(-2px);
+    box-shadow: 0 8px 30px rgba(204, 255, 0, 0.4);
+  }
+  
+  /* Hero Mobile */
+  .hero {
+    padding-top: 70px;
+  }
+  
+  .hero-content {
+    padding: 40px 16px;
+  }
+  
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 30px 0;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  
+  .btn {
+    min-width: auto;
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+  
+  /* Artists Mobile */
+  .artists-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  /* Modal Mobile */
   .modal {
     margin: 16px;
     max-width: calc(100% - 32px);

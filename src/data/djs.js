@@ -13,7 +13,7 @@ export const djs = [
     youtube: 'https://www.youtube.com/channel/UCnvOrXyqGdK2AFrYcAQAwyg',
     instagram: 'https://www.instagram.com/djlucashenrique_/',
     spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0cm0T95hVIgR9IKmz76prJ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-    spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
+    spotifyUrl: 'https://open.spotify.com/intl-pt/artist/0auLP5j5MbnqMRXmdlvub9',
     topTrack: 'MEGA PROMISCUOUS',
     stats: {
       youtubeSubscribers: '8.8K',
@@ -32,7 +32,7 @@ export const djs = [
     youtube: 'https://www.youtube.com/@DjZatelli',
     instagram: 'https://www.instagram.com/djzatelli/',
     spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3q20ZeAbg7FvRr7dbWpeV1?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-    spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
+    spotifyUrl: 'https://open.spotify.com/intl-pt/artist/5WXA9QsuHzbaB696vr1Hkg',
     topTrack: 'MEGA FUNK HOJE EU QUERO FUDER',
     stats: {
       youtubeSubscribers: '6.31K',
@@ -51,7 +51,7 @@ export const djs = [
     youtube: 'https://www.youtube.com/@djrodriz1',
     instagram: 'https://www.instagram.com/rodriz.wav/?hl=pt-br',
     spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0cm0T95hVIgR9IKmz76prJ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-    spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
+    spotifyUrl: 'https://open.spotify.com/intl-pt/artist/3s085Y3JMDExHJiZzDxhUP',
     topTrack: 'MEGA FUNK SUSTENTA',
     stats: {
       youtubeSubscribers: '1.79K',
@@ -70,7 +70,7 @@ export const djs = [
     youtube: 'https://www.youtube.com/channel/UC-CEC6IFh1ogjyJlL3QOslQ',
     instagram: 'https://www.instagram.com/digoidg/',
     spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3q20ZeAbg7FvRr7dbWpeV1?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-    spotifyUrl: 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x',
+    spotifyUrl: 'https://open.spotify.com/intl-pt/artist/7ff4I1cuWy9xBpTaYeinvv',
     topTrack: 'Mega Senta Fumadona',
     stats: {
       youtubeSubscribers: '2.46K',

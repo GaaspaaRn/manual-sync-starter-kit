@@ -22,7 +22,7 @@ function App() {
   
   const { scrollY } = useScroll();
   const heroY = useTransform(scrollY, [0, 500], [0, 150]);
-  const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const heroOpacity = useTransform(scrollY, [0, 500], [1, 0]);
   
   // Get total stats
   const totalStats = getTotalStats();
@@ -74,7 +74,7 @@ function App() {
       
       {/* Header */}
       <motion.header 
-        className={`header ${scrollPosition > 50 ? 'header-scrolled' : ''}`}
+        className={`header ${scrollPosition > 150 ? 'header-scrolled' : ''}`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
