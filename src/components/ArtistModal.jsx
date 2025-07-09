@@ -4,7 +4,7 @@ import { Youtube, Instagram, Music } from 'lucide-react';
 import LazyImage from './LazyImage';
 import { openWhatsApp } from '../utils/whatsapp';
 
-const ArtistModal = ({ selectedDJ, onClose }) => {
+const ArtistModal = ({ selectedDJ, modalPosition, onClose }) => {
   if (!selectedDJ) return null;
 
   return (
@@ -19,6 +19,13 @@ const ArtistModal = ({ selectedDJ, onClose }) => {
       <motion.div 
         className="modal" 
         onClick={(e) => e.stopPropagation()}
+        style={{
+          position: 'absolute',
+          top: `${modalPosition.top}px`,
+          left: window.innerWidth <= 768 ? '50%' : `${modalPosition.left}px`,
+          transform: window.innerWidth <= 768 ? 'translateX(-50%)' : 'none',
+          zIndex: 10001
+        }}
         initial={{ scale: 0.8, opacity: 0, y: 50 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.8, opacity: 0, y: 50 }}
