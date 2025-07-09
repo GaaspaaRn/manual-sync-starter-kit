@@ -939,10 +939,11 @@ body {
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 10000;
   padding: 20px;
+  padding-top: 80px;
   overflow-y: auto;
 }
 
@@ -1244,6 +1245,10 @@ body {
     margin: 16px;
     max-width: calc(100% - 32px);
     max-height: 90vh;
+  }
+  
+  .modal-overlay {
+    padding-top: 70px;
   }
   
   .modal-content {
