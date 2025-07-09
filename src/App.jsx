@@ -497,7 +497,7 @@ function App() {
       <section id="contact" className="contact">
         <div className="container">
           <RevealOnScroll>
-            <h2 className="section-title">SIGA A GRUV LABEL</h2>
+            <h2 className="section-title">CONTATO</h2>
           </RevealOnScroll>
           
           <RevealOnScroll delay={0.2}>
