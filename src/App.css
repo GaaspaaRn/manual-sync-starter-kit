@@ -943,7 +943,7 @@ body {
   justify-content: center;
   z-index: 10000;
   padding: 20px;
-  padding-top: 80px;
+  padding-top: 200px;
   overflow-y: auto;
 }
 
@@ -1248,7 +1248,7 @@ body {
   }
   
   .modal-overlay {
-    padding-top: 70px;
+    padding-top: 150px;
   }
   
   .modal-content {
