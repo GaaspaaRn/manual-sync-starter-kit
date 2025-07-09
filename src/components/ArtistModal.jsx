@@ -22,8 +22,9 @@ const ArtistModal = ({ selectedDJ, modalPosition, onClose }) => {
         style={{
           position: 'absolute',
           top: `${modalPosition.top}px`,
-          left: window.innerWidth <= 768 ? '50%' : `${modalPosition.left}px`,
-          transform: window.innerWidth <= 768 ? 'translateX(-50%)' : 'none',
+          left: window.innerWidth <= 768 ? '16px' : `${modalPosition.left}px`,
+          right: window.innerWidth <= 768 ? '16px' : 'auto',
+          transform: 'none',
           zIndex: 10001
         }}
         initial={{ scale: 0.8, opacity: 0, y: 50 }}
