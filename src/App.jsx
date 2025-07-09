@@ -493,6 +493,41 @@ function App() {
       </section>
 
 
+      {/* Social Media Section */}
+      <section id="contact" className="contact">
+        <div className="container">
+          <RevealOnScroll>
+            <h2 className="section-title">SIGA A GRUV LABEL</h2>
+          </RevealOnScroll>
+          
+          <RevealOnScroll delay={0.2}>
+            <div className="social-buttons">
+              <motion.a
+                href="https://www.instagram.com/gruvlabel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-button instagram"
+                whileHover={{ scale: 1.05, y: -5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Instagram size={24} />
+                <span>@gruvlabel</span>
+              </motion.a>
+              
+              <motion.button
+                onClick={() => openWhatsApp('Olá, gostaria de saber mais sobre a Gruv Label.')}
+                className="social-button whatsapp"
+                whileHover={{ scale: 1.05, y: -5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <i className="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </motion.button>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="footer">
         <div className="container">

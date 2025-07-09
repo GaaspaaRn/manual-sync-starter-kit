@@ -1295,3 +1295,54 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
 }
+
+/* Social Media Buttons */
+.social-buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.social-button.instagram {
+  background: linear-gradient(135deg, #e4405f, #833ab4, #405de6);
+}
+
+.social-button.whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.social-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .social-buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .social-button {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+}
