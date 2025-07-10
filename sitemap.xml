@@ -8,7 +8,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://gruvlabel.vercel.app/</loc>
+    <loc>https://gruvlabel.com/</loc>
     <lastmod>2025-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -16,7 +16,7 @@
   
   <!-- Artists Section -->
   <url>
-    <loc>https://gruvlabel.vercel.app/#artists</loc>
+    <loc>https://gruvlabel.com/#artists</loc>
     <lastmod>2025-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -24,7 +24,7 @@
   
   <!-- About Section -->
   <url>
-    <loc>https://gruvlabel.vercel.app/#about</loc>
+    <loc>https://gruvlabel.com/#about</loc>
     <lastmod>2025-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -32,11 +32,10 @@
   
   <!-- Contact Section -->
   <url>
-    <loc>https://gruvlabel.vercel.app/#contact</loc>
+    <loc>https://gruvlabel.com/#contact</loc>
     <lastmod>2025-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
 </urlset>
-
