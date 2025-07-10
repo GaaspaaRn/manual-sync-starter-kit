@@ -13,7 +13,7 @@ export default {
         
         // Cores secundárias/acentos
         primary: {
-          DEFAULT: "hsl(72, 100%, 50%)",
+          DEFAULT: "hsl(180, 100%, 50%)",
           foreground: "hsl(0, 0%, 4%)",
         },
         secondary: {
@@ -21,7 +21,7 @@ export default {
           foreground: "hsl(0, 0%, 100%)",
         },
         accent: {
-          DEFAULT: "hsl(72, 100%, 50%)",
+          DEFAULT: "hsl(180, 100%, 50%)",
           foreground: "hsl(0, 0%, 4%)",
         },
         
@@ -36,7 +36,7 @@ export default {
         },
         border: "hsl(0, 0%, 15%)",
         input: "hsl(0, 0%, 15%)",
-        ring: "hsl(72, 100%, 50%)",
+        ring: "hsl(180, 100%, 50%)",
         
         // Cores de estado
         destructive: {
@@ -55,8 +55,8 @@ export default {
         xs: '2px',
       },
       boxShadow: {
-        'neon': '0 0 40px hsl(72, 100%, 50%)',
-        'neon-sm': '0 0 20px hsl(72, 100%, 50%)',
+        'neon': '0 0 40px hsl(180, 100%, 50%)',
+        'neon-sm': '0 0 20px hsl(180, 100%, 50%)',
       },
     },
   },

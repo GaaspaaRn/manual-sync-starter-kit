@@ -15,8 +15,8 @@
   --dark-bg: #0A0A0A;
   --dark-card: #151515;
   --dark-card-hover: #202020;
-  --accent-primary: #CCFF00;
-  --accent-secondary: #CCFF00;
+  --accent-primary: #00FFFF;
+  --accent-secondary: #00FFFF;
 }
 
 /* Screen reader only - hides content visually but keeps it for accessibility and SEO */
@@ -58,14 +58,14 @@ body {
   position: fixed;
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle, rgba(204,255,0,0.8) 0%, rgba(204,255,0,0.3) 70%, transparent 100%);
+  background: radial-gradient(circle, rgba(0,255,255,0.8) 0%, rgba(0,255,255,0.3) 70%, transparent 100%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
   transition: all 0.15s cubic-bezier(0.23, 1, 0.320, 1);
   backdrop-filter: blur(2px);
-  border: 1px solid rgba(204,255,0,0.3);
+  border: 1px solid rgba(0,255,255,0.3);
 }
 
 @media (max-width: 768px) {
@@ -115,7 +115,7 @@ body {
 .header-scrolled {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   background: rgba(10, 10, 10, 0.98);
-  border-bottom-color: rgba(204, 255, 0, 0.2);
+  border-bottom-color: rgba(0, 255, 255, 0.2);
 }
 
 .container {
@@ -261,12 +261,12 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(204, 255, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
 }
 
 .contact-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(204, 255, 0, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 255, 255, 0.4);
 }
 
 .contact-btn::after {
@@ -357,7 +357,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
-  text-shadow: 0 0 40px rgba(204, 255, 0, 0.3);
+  text-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
 }
 
 .hero-title-sub {
@@ -404,7 +404,7 @@ body {
 
 .stat:hover {
   transform: translateY(-8px);
-  border-color: rgba(204, 255, 0, 0.3);
+  border-color: rgba(0, 255, 255, 0.3);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   background: rgba(255, 255, 255, 0.05);
 }
@@ -462,12 +462,12 @@ body {
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   color: #0A0A0A;
-  box-shadow: 0 10px 30px rgba(204, 255, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(204, 255, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.4);
 }
 
 .btn-secondary {
@@ -772,7 +772,7 @@ body {
 
 .service:hover {
   transform: translateY(-8px);
-  border-color: rgba(204, 255, 0, 0.3);
+  border-color: rgba(0, 255, 255, 0.3);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   background: rgba(255, 255, 255, 0.05);
 }
@@ -835,7 +835,7 @@ body {
 .contact-method:hover {
   transform: translateX(10px);
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(204, 255, 0, 0.3);
+  border-color: rgba(0, 255, 255, 0.3);
 }
 
 .contact-method i {
@@ -875,7 +875,7 @@ body {
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(204, 255, 0, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -1139,13 +1139,13 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   color: #000000;
-  background: rgba(204, 255, 0, 0.15) !important;
+  background: rgba(0, 255, 255, 0.15) !important;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-contract-transparent:hover {
-  background: rgba(204, 255, 0, 0.25) !important;
+  background: rgba(0, 255, 255, 0.25) !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
@@ -1185,7 +1185,7 @@ body {
   
   .mobile-nav .nav-link:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(204, 255, 0, 0.3);
+    border-color: rgba(0, 255, 255, 0.3);
     transform: translateX(5px);
   }
   
@@ -1194,12 +1194,12 @@ body {
     color: #0A0A0A;
     font-weight: 700;
     margin-top: 8px;
-    box-shadow: 0 4px 20px rgba(204, 255, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
   }
   
   .mobile-nav .contact-btn:hover {
     transform: translateX(5px) translateY(-2px);
-    box-shadow: 0 8px 30px rgba(204, 255, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.4);
   }
   
   /* Hero Mobile */

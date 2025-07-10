@@ -22,7 +22,7 @@ export const djs = [
       spotifyMonthly: '26.2K'
     },
     bio: 'DJ e produtor musical especializado em megafunk, natural de Joinville, Santa Catarina. Com um estilo único e exclusivo, Lucas Henrique vem conquistando seu espaço na cena musical.',
-    color: 'hsl(72, 100%, 50%)'
+    color: 'hsl(180, 100%, 50%)'
   },
   {
     id: 'zatelli',
@@ -41,7 +41,7 @@ export const djs = [
       spotifyMonthly: '3.9K'
     },
     bio: 'Thiago Correia, nascido e criado na cidade de Joinville (SC), começou a se envolver com a cena do Mega Funk em 2021, criando elementos da música eletrônica.',
-    color: 'hsl(72, 100%, 50%)'
+    color: 'hsl(180, 100%, 50%)'
   },
   {
     id: 'rodriz',
@@ -60,7 +60,7 @@ export const djs = [
       spotifyMonthly: '83.8K'
     },
     bio: 'Produtor emergente na cena do megafunk, conhecido por suas batidas inovadoras e colaborações com outros artistas da região Sul.',
-    color: 'hsl(72, 100%, 50%)'
+    color: 'hsl(180, 100%, 50%)'
   },
   {
     id: 'digo',
@@ -79,7 +79,7 @@ export const djs = [
       spotifyMonthly: '0.2K'
     },
     bio: 'Artista versátil que combina elementos do funk tradicional com a energia do megafunk, criando um som único e envolvente.',
-    color: 'hsl(72, 100%, 50%)'
+    color: 'hsl(180, 100%, 50%)'
   }
 ];
 

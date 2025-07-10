@@ -425,7 +425,7 @@ function App() {
                       </motion.button>
                       <motion.button 
                         className="btn btn-artist btn-contract" 
-                        style={{ background: `linear-gradient(135deg, hsl(72, 100%, 50%, 0.5), hsl(72, 100%, 50%))` }}
+                        style={{ background: `linear-gradient(135deg, hsl(180, 100%, 50%, 0.5), hsl(180, 100%, 50%))` }}
                         onClick={(e) => {
                           e.stopPropagation();
                           openWhatsApp(`Olá, gostaria de saber mais sobre o ${dj.artistName}.`);
