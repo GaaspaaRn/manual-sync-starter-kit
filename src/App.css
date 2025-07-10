@@ -657,7 +657,7 @@ body {
 .btn-artist {
   flex: 1;
   background: var(--accent-color);
-  color: #FFFFFF;
+  color: #000000;
   border-radius: 50px;
   padding: 12px 12px;
   font-weight: 600;
@@ -1138,7 +1138,7 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #FFFFFF;
+  color: #000000;
   background: rgba(204, 255, 0, 0.15) !important;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
